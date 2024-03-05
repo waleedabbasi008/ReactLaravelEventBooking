@@ -1,0 +1,103 @@
+/* // ############### Testimonial styling ########################
+// ############################## Testimonial Styling ############################## */
+#Testimonial h5 {
+    color: #B5C0D0;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#Testimonial h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #B5C0D0;
+}
+
+.testimonial__container {
+    width: 60%;
+}
+
+.client__avatar {
+    width: 8rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 0.4rem solid rgba(77, 181, 255, 0.4);
+}
+
+.client__avatar img {
+    max-width: 100%;
+    /* Ensure the image doesn't exceed the container's width */
+    max-height: 100%;
+    /* Ensure the image doesn't exceed the container's height */
+}
+
+.testimonial {
+    background: #ffffff05;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    user-select: none;
+}
+
+/* // .client__avatar img {
+//     // height: 35vh;
+//     // border-radius: 50%;
+// } */
+
+.client__reviews {
+    color: #B5C0D0;
+    font-weight: 300;
+    display: block;
+    width: 80%;
+    margin: 0.8rem auto 0;
+
+
+}
+
+/* // ########################## Responsive Testimonial Page ##################################
+// ############################# Responsive  tablets ####################### */
+@media screen and (max-width:1024px) {
+    .testimonial__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+
+    }
+
+    .testimonial__container {
+        width: 100%;
+    }
+
+    .testimonial {
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .testimonial {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .client__reviews {
+        color: #B5C0D0;
+        font-weight: 300;
+        display: block;
+        width: 100%;
+        margin: 0.8rem auto 0;
+
+
+    }
+
+    .testimonial__container {
+        width: 100%;
+    }
+}

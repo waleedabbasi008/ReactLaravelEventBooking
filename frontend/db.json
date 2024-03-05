@@ -1,0 +1,43 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "waleed",
+      "email": "waleedabbasi840@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "usman",
+      "email": "usmanabbasi840@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "zeeshan",
+      "email": "zeeshanabbasi840@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "majid",
+      "email": "majidabbasi840@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "touqeer",
+      "email": "touweerabbasi840@gmail.com"
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "name": "waleedabbasi",
+      "email": "waleed8@mail.com",
+      "id": 9
+    }
+  ]
+}
