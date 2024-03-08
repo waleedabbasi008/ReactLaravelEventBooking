@@ -1,0 +1,2 @@
+This is a full stack Event booking management system project where you can have frontend in Reactjs backend in laravel we have created the following modules
+Login/register,event management, photography management, decoration management, venue management, booking management where we have two primary actors user and admin where user can only book the event and admin can add, delete, update, and view the events
