@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\event;
 use App\Models\member;
 use App\Models\decorator;
+use App\Models\order;
 use App\Models\venue;
 use Illuminate\Http\Request;
 
@@ -25,6 +26,11 @@ class CountController extends Controller
     {
         $venue = venue::count();
         return $venue;
+    }
+    function countOrders()
+    {
+        $orders = order::count();
+        return $orders;
     }
     function subTotal()
     {

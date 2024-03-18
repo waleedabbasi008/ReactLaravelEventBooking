@@ -84,4 +84,8 @@ Route::post('addorder', [OrderController::class, 'addOrder']);
 Route::get('countevent', [CountController::class, 'countEvent']);
 Route::get('countdecorator', [CountController::class, 'countDecorator']);
 Route::get('countvenue', [CountController::class, 'countVenue']);
+Route::get('countorders', [CountController::class, 'countOrders']);
 Route::get('subtotal', [CountController::class, 'subTotal']);
+// **************************** api for order **********************************
+Route::post('addorder', [OrderController::class, 'addOrder']);
+Route::get('getorder', [OrderController::class, 'fetchOrder']);

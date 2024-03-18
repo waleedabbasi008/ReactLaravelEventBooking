@@ -43,6 +43,7 @@ const Dashboard = () => {
     const [countEvent, setcountEvent] = useState([]);
     const [countVenue, setcountVenue] = useState([]);
     const [countDecorator, setcountDecorator] = useState([]);
+    const [countOrders, setcountOrders] = useState([]);
     const [total, settotal] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
@@ -79,6 +80,15 @@ const Dashboard = () => {
         let result = await response.json();
         setcountVenue(result);
     }
+    // ***************************************** count Orders method **************************
+    const orders = async () => {
+        let response = await fetch('http://127.0.0.1:8000/api/countorders');
+        if (!response.ok) {
+            throw new Error('response not ok')
+        }
+        let result = await response.json();
+        setcountOrders(result);
+    }
     // ***************************************** count Sub total **************************
     const subtotal = async () => {
         let response = await fetch('http://127.0.0.1:8000/api/subtotal');
@@ -93,6 +103,7 @@ const Dashboard = () => {
         decore();
         venue();
         subtotal();
+        orders();
     }, [])
 
     return (
@@ -119,6 +130,13 @@ const Dashboard = () => {
                     <p> {countVenue} </p>
                     <button className="btn btn-outline-success">
                         <NavLink to='/venuelist'> Check Venue </NavLink>
+                    </button>
+                </div>
+                <div className="ordersCard card">
+                    <h3> Total Orders booked </h3>
+                    <p> {countOrders} </p>
+                    <button className="btn btn-outline-success">
+                        <NavLink to='/vieworder'> Check orders </NavLink>
                     </button>
                 </div>
             </Container>

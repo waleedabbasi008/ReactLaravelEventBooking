@@ -27,6 +27,8 @@ import About from './Pages/About';
 import Services from './Pages/Services';
 import Contact from './Pages/Contact';
 import Dashboard from './Components/Dashboard';
+import AddOrder from './Components/AddOrder';
+import ViewOrder from './Components/ViewOrder';
 function App() {
   return (
     <>
@@ -44,6 +46,7 @@ function App() {
         <Route exact path='/updatedecore/:id' element={<Protected Cmp={UpdateDecore} />} />
         <Route exact path='/adddecore' element={<Protected Cmp={AddDecore} />} />
         <Route exact path='/decorelist' element={<Protected Cmp={DecoreList} />} />
+        <Route exact path='/vieworder' element={<Protected Cmp={ViewOrder} />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/register' element={<Register />} />
         <Route exact path='/search' element={<Search />} />
@@ -54,6 +57,7 @@ function App() {
         <Route exact path='/about' element={<About />} />
         <Route exact path='/services' element={<Services />} />
         <Route exact path='/contact' element={<Contact />} />
+        <Route exact path='/bookorder' element={<AddOrder />} />
       </Routes>
     </>
   );

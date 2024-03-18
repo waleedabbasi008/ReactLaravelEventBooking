@@ -43,18 +43,11 @@ const Header = () => {
                                     <>
                                         <NavItems>
                                             <Nav style={{ marginLeft: '5rem' }} className=' nav-items'>
-                                                {/* <NavDropdown title='Products' id="basic-nav-dropdown" className=' dropDown '>
-                                                    <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Products List </NavLink>
-                                                    </NavDropdown.Item>
-                                                    <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/add' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Add product </NavLink>
-                                                    </NavDropdown.Item>
-                                                    <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/search' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Search Product </NavLink>
-                                                    </NavDropdown.Item>
-                                                </NavDropdown> */}
                                                 <NavDropdown title='Events' id="basic-nav-dropdown" className=' dropDown '>
+                                                    <NavDropdown.Item href="#action/3.1">
+
+                                                        <NavLink to='/' className=' nav-item'> Home </NavLink>
+                                                    </NavDropdown.Item>
                                                     <NavDropdown.Item href="#action/3.1">
                                                         <NavLink to='/eventlist' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Events List </NavLink>
                                                     </NavDropdown.Item>
@@ -86,7 +79,7 @@ const Header = () => {
                                                     <NavDropdown.Item href="#action/3.1">
                                                         <NavLink to='/searchdecore' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Search Decorator </NavLink>
                                                     </NavDropdown.Item>
-                                                </NavDropdown>                                                
+                                                </NavDropdown>
                                             </Nav>
                                         </NavItems>
                                         {/* <NavLink to='/login' className='nav-link text-decoration-none p-4 text-light'> Login </NavLink> */}
