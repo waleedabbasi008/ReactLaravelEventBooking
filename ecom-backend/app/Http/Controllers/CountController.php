@@ -37,7 +37,8 @@ class CountController extends Controller
         $event = event::count();
         $decorator = decorator::count();
         $venue = venue::count();
-        $subTotal = $event + $decorator + $venue;
+        $order = order::count();
+        $subTotal = $event + $decorator + $venue + $order;
         return $subTotal;
     }
 }

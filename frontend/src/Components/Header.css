@@ -1,3 +1,6 @@
-.navBar{
-    background-color: #9c979770;    
+.navbar{    
+    color: #ECE8DD;        
+}
+.dropDownItem{
+    border: 2px solid green;
 }

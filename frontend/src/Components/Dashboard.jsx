@@ -2,6 +2,14 @@ import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import { NavLink, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+const DashHome = styled.div`
+height: 100vh;
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('images/outdoor-decor7.jpg');
+background-position: center;
+background-size: cover;
+backdrop-filter: blur(15px);
+
+`
 const Container = styled.div`
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -10,11 +18,13 @@ place-items: center;
 .card{
     padding: 1.5rem;
     text-align: center;
+    background: #33333356;
+    color: #ECE8DD;    
 }
 .card a{
     text-decoration: none;
     font-weight: 600;
-    color: black;
+    color: #ECE8DD;    
 }
 @media screen and (max-width: 768px) {    
     grid-template-columns: 1fr;    
@@ -23,13 +33,15 @@ place-items: center;
 `
 const SubTotal = styled.div`
 position: relative;
-margin-top: 10rem;
+margin-top: 0rem;
 .card{
     position: absolute;
-    top: 80%;
+    top: 0%;
     left: 80%;
     padding: 1.5rem;
     text-align: center;
+    background: #33333356;
+    color: #ECE8DD;
 }
 @media screen and (max-width: 768px) {    
     .card{
@@ -108,8 +120,8 @@ const Dashboard = () => {
 
     return (
 
-        <div>
-            <Header />  <br /> <br />
+        <DashHome className='dashboard'>
+            <Header  />  <br /> <br />
             <Container className=' container'>
                 <div className="eventCard card">
                     <h3> Total Events added </h3>
@@ -148,7 +160,7 @@ const Dashboard = () => {
             </SubTotal>
 
 
-        </div>
+        </DashHome>
     )
 }
 

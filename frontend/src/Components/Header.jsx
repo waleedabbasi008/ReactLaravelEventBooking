@@ -6,9 +6,11 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import UserHeader from '../LayOuts/UserHeader';
+import './Header.css';
 const NavItems = styled.div`
 .nav-items .dropDown{    
     margin-left: 2rem;
+    color: red;
 }
 
 `
@@ -28,7 +30,7 @@ const Header = () => {
     }
     return (
         <>
-            <Navbar expand="lg" className="text-light ">
+            <Navbar expand="lg" className="text-light navbar">
                 <Container>
                     <Navbar.Brand href="/dashboard"> {
                         localStorage.getItem('user-info') ? <h2> Dashboard </h2> : null
@@ -43,43 +45,49 @@ const Header = () => {
                                     <>
                                         <NavItems>
                                             <Nav style={{ marginLeft: '5rem' }} className=' nav-items'>
-                                                <NavDropdown title='Events' id="basic-nav-dropdown" className=' dropDown '>
+                                                <Nav.Link>
+                                                    <NavLink to='/' className=' text-decoration-none' style={{ paddingLeft: '2rem' }}> Home </NavLink>
+                                                </Nav.Link>
+                                                <NavDropdown title='Events' id="nav-dropdown" className=' dropdown-menu-dark'>
+
                                                     <NavDropdown.Item href="#action/3.1">
 
-                                                        <NavLink to='/' className=' nav-item'> Home </NavLink>
                                                     </NavDropdown.Item>
                                                     <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/eventlist' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Events List </NavLink>
+                                                        <NavLink to='/eventlist' className='nav-link text-decoration-none pl-5' style={{ paddingLeft: '2rem' }}> Events List </NavLink>
                                                     </NavDropdown.Item>
                                                     <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/addevent' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Add Event </NavLink>
+                                                        <NavLink to='/addevent' className='nav-link text-decoration-none pl-5' style={{ paddingLeft: '2rem' }}> Add Event </NavLink>
                                                     </NavDropdown.Item>
                                                     <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/searchevent' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Search Event </NavLink>
+                                                        <NavLink to='/searchevent' className='nav-link text-decoration-none pl-5' style={{ paddingLeft: '2rem' }}> Search Event </NavLink>
                                                     </NavDropdown.Item>
                                                 </NavDropdown>
-                                                <NavDropdown title='Venue' id="basic-nav-dropdown" className=' dropDown '>
-                                                    <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/venuelist' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Venue List </NavLink>
+                                                <NavDropdown title='Venue' id="basic-nav-dropdown" className=' dropDown'>
+                                                    <NavDropdown.Item href="#action/3.1" className=' dropDownItem'>
+                                                        <NavLink to='/venuelist' className='nav-link text-decoration-none pl-5' style={{ paddingLeft: '2rem' }}> Venue List </NavLink>
                                                     </NavDropdown.Item>
                                                     <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/addvenue' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Add Venue </NavLink>
+                                                        <NavLink to='/addvenue' className='nav-link text-decoration-none pl-5' style={{ paddingLeft: '2rem' }}> Add Venue </NavLink>
                                                     </NavDropdown.Item>
                                                     <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/searchvenue' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Search Venue </NavLink>
+                                                        <NavLink to='/searchvenue' className='nav-link text-decoration-none pl-5' style={{ paddingLeft: '2rem' }}> Search Venue </NavLink>
                                                     </NavDropdown.Item>
                                                 </NavDropdown>
                                                 <NavDropdown title='Decoration' id="basic-nav-dropdown" className=' dropDown '>
                                                     <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/decorelist' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Decorator List </NavLink>
+                                                        <NavLink to='/decorelist' className='nav-link text-decoration-none pl-5' style={{ paddingLeft: '2rem' }}> Decorator List </NavLink>
                                                     </NavDropdown.Item>
                                                     <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/adddecore' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Add Decorator </NavLink>
+                                                        <NavLink to='/adddecore' className='nav-link text-decoration-none pl-5' style={{ paddingLeft: '2rem' }}> Add Decorator </NavLink>
                                                     </NavDropdown.Item>
                                                     <NavDropdown.Item href="#action/3.1">
-                                                        <NavLink to='/searchdecore' className='nav-link text-decoration-none pl-5 text-dark' style={{ paddingLeft: '2rem' }}> Search Decorator </NavLink>
+                                                        <NavLink to='/searchdecore' className='nav-link text-decoration-none pl-5' style={{ paddingLeft: '2rem' }}> Search Decorator </NavLink>
                                                     </NavDropdown.Item>
                                                 </NavDropdown>
+                                                <Nav.Link>
+                                                    <NavLink to='/vieworder' className=' text-decoration-none' style={{ paddingLeft: '2rem' }}> Booked Orders </NavLink>
+                                                </Nav.Link>
                                             </Nav>
                                         </NavItems>
                                         {/* <NavLink to='/login' className='nav-link text-decoration-none p-4 text-light'> Login </NavLink> */}

@@ -13,6 +13,9 @@ const ViewOrder = () => {
     useEffect(() => {
         fetchData();
     }, [])
+    // *********************************** for accessing the email of the user ***************************************
+    let user = JSON.parse(localStorage.getItem('user-info'))
+    console.log(user);
     return (
         <>
             <Header />
@@ -26,7 +29,7 @@ const ViewOrder = () => {
                             <th> No of persons </th>
                             <th> Event Type </th>
                             <th> Decoration Type </th>
-                            <th> Venue </th>
+                            <th> Venue </th>                            
                         </tr>
                     </thead>
                     <tbody>
@@ -41,7 +44,7 @@ const ViewOrder = () => {
                                             <td> {elem.persons} </td>
                                             <td> {elem.eventtype} </td>
                                             <td> {elem.decoretype} </td>
-                                            <td> {elem.venuetype} </td>
+                                            <td> {elem.venuetype} </td>                                            
                                         </tr>
                                     </>
                                 )
@@ -50,6 +53,7 @@ const ViewOrder = () => {
 
                     </tbody>
                 </table>
+                <p> Order taken by: {user && user.name} </p>
             </div>
         </>
     )

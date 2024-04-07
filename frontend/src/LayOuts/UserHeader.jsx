@@ -237,7 +237,9 @@ const UserHeader = () => {
                     <div className={`nav-toggle ${isopen && 'open'}`} onClick={() => setisopen(!isopen)}>
                         <div className="bar">  </div>
                     </div>
-                    <NavLink to='/bookorder'> <button className="btn btn-primary"> Book Now </button> </NavLink>
+                    <div className="book" style={{ marginLeft: "3rem" }}>
+                        <NavLink to='/bookorder'> <button className="btn btn-primary"> Book Now </button> </NavLink>
+                    </div>
                     <div className="user-data">
                         {
                             localStorage.getItem('user-info') ?

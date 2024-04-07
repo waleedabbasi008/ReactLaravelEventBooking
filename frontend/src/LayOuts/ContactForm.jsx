@@ -74,7 +74,6 @@ const ContactForm = () => {
     setdata({ ...data, [name]: value });
   }
   const handleSubmit = (e) => {
-
     e.preventDefault();
   }
   // ************************************* Function to send email *******************************************
@@ -97,7 +96,7 @@ const ContactForm = () => {
       <Container>
         <section id="contact-form">
           <div className="container form-container">
-            <form className=" container form-group" ref={form} onSubmit={sendEmail}>
+            <form className=" container form-group" onSubmit={sendEmail}>
               <div className="personel-detail">
                 <h3 className=' form-label' data-aos="fade-up"> Name </h3>
                 <div className="name">
