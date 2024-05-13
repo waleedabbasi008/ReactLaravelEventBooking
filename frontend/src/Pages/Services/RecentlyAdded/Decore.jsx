@@ -13,7 +13,7 @@ gap: 3rem;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease-in-out;
     padding: 20px 40px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), #333;
+    background: #1b1b1bb7;    
     cursor: pointer;
     margin: auto;
     margin-top: 5rem;

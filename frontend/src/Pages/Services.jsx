@@ -11,10 +11,10 @@ import Event from './Services/RecentlyAdded/Event';
 import Venue from './Services/RecentlyAdded/Venue';
 import Footer from '../LayOuts/Footer';
 const Container = styled.div`
-background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('images/walimaStage3.jpg');
-background-repeat: no-repeat;
-background-size: cover;
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('images/event.jpg');
 background-position: center;
+background-size: cover;
+backdrop-filter: blur(15px);
 #services-hero{
   height: 80vh;
   display: flex;

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import UserHeader from '../LayOuts/UserHeader';
 import styled from 'styled-components';
-import img1 from '../assets/hero-img-1.jpg';
 import { FaAngleDown } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
 import AboutDetail from './AboutDetail';
@@ -18,12 +17,16 @@ import ContactForm from '../LayOuts/ContactForm';
 import './pages.css';
 const Hero = styled.div`
 /* @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Bricolage+Grotesque&family=Cinzel&family=Delicious+Handrawn&family=Gabarito&family=Kablammo&family=Lato:wght@300;400&family=Montserrat:ital,wght@0,300;0,500;0,700;1,400&family=Noto+Sans:wght@300&family=Open+Sans&family=Oswald:wght@200;300;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;500;600&family=Roboto+Mono:wght@200;300&family=Roboto:wght@100;400;900&family=Rubik+Spray+Paint&family=Rubik:wght@300;400&family=Sono:wght@800&family=Ysabeau+Infant:wght@300&family=Ysabeau+Office:wght@200;300&display=swap'); */
-height: auto;
-background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/home-bg.jpg');
+/* height: auto;
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/event.jpg'); */
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('images/addevent.jpg');
+background-position: center;
+background-size: cover;
+backdrop-filter: blur(15px);
 /* background-position: center;
 background-size: cover;
 background-repeat: no-repeat; */
-backdrop-filter: blur(5px);
+backdrop-filter: blur(10px);
 font-family: 'Gabarito', sans-serif;
 .down-arrow{
   text-align: center;  
@@ -135,6 +138,9 @@ const Container = styled.div`
     border-radius: 25px;
     transition: all 0.5s ease-in-out;
 }
+#hero-section .hero-text .btn2{
+  margin-left: 15px;
+}
 #hero-section .hero-text button:hover{
   background: transparent;
 }
@@ -144,26 +150,26 @@ const Container = styled.div`
   font-size: 1.2rem;
 }
 #hero-section .hero-img{
- 
-  border-radius: 50% 50% 0 0;
-  /* background: #F3F8FF; */
+  width: 50%;
+  height: 50vh;
+  border: 2px solid red;
+ display: flex;
+ flex-wrap: wrap;
 }
-#hero-section .hero-img img{
-   width: 300px;
-  height: 300px;
-  aspect-ratio: 4/4;
-  border-radius: 50% 50% 0 0;
+#hero-section .hero-img .image1, #hero-section .hero-img .image{
+   width: 150px;
+  height: 150px;
+  aspect-ratio: 4/4;  
   transform: translateX(5px);
   animation: animate 1s infinite ease-in-out alternate-reverse;
-box-shadow: 5px 5px  10px #333;
 }
 @keyframes animate {
-  0%{
-     transform: translateY(10px);     
-    } 
-    100%{
-      transform: translateY(-10px);      
-   } 
+  0% {
+        transform: translate(-30%, -30%) rotate(10deg);
+    }
+    100% {
+        transform: translate(-20%, -20%) rotate(10deg);
+    }
  
 }
 @media screen and (max-width: 1000px) {
@@ -227,17 +233,14 @@ const Home = () => {
         <Container className='container'>
           <section id="hero-section">
             <div className="hero-text" data-aos="fade-up">
-              <h1 className=' font-color'> Waleed Events </h1>
-              <p className=' font-color'> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil tempore molestias perspiciatis optio nulla amet delectus, suscipit architecto sequi illum dolorem perferendis animi sint velit dicta dolor eveniet ab blanditiis. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil tempore molestias perspiciatis optio nulla amet delectus, <span>
+              <h1 className=' font-color'> <span> Waleed  </span>  Events </h1>
+              <p className=' font-color'> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil tempore molestias perspiciatis optio nulla amet delectus, suscipit architecto sequi illum dolorem perferendis animi sint velit dicta dolor eveniet ab blanditiis. Lorem ipsum dolor sit amet  <span>
 
-                <ReactTyped strings={[" suscipit architecto sequi illum dolorem perferendis animi sint velit"]} typeSpeed={20} loop={true} />
+                <ReactTyped strings={[" c optio nulla amet delectus, suscipit architecto sequi illum dolorem perferendis animi sint velit"]} typeSpeed={25} loop={true} />
               </span> </p>
               <button className="btn text-center font-color"> <NavLink to='/about'> About us </NavLink> </button>
+              <button className="btn text-center font-color btn2"> <NavLink to='/contact'> Contact Us</NavLink> </button>
             </div>
-            <div className="hero-img">
-              <img src={img1} alt="" />
-            </div>
-
             <div className="down-arrow">
               <a href="#about"> <FaAngleDown /> </a>
             </div>

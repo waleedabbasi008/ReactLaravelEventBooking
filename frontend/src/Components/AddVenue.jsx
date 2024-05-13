@@ -4,6 +4,13 @@ import Header from './Header';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+const Addvenue = styled.div`
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('images/addevent.jpg');
+background-position: center;
+background-size: cover;
+backdrop-filter: blur(15px);
+height: max-content;
+`
 const Container = styled.div`
 `
 
@@ -35,9 +42,10 @@ const AddVenue = () => {
     }
     return (
         <>
+        <Addvenue>
             <Header /> <br />
             <Container className="container">
-                <h1 className="body-header text-center"> Add Venue </h1>
+                <h1 className="body-header text-center px-10 py-10 text-light"> Add Venue </h1>
                 <div className="col-sm-6 offset-sm-3">
                     <input type="text" className=' form-control' placeholder='name' onChange={(e) => setlocation(e.target.value)} /> <br />
                     <input type="file" className=' form-control' placeholder='File' onChange={(e) => setfile(e.target.files[0])} /> <br />
@@ -45,6 +53,7 @@ const AddVenue = () => {
                     <button className="btn btn-primary" onClick={addevent} > Add Event </button>
                 </div>
             </Container>
+            </Addvenue>
         </>
     )
 }

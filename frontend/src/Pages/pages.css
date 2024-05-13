@@ -7,4 +7,5 @@ body {
 .font-color {
   color: #B5C0D0;
   /* color: #F3F3F3; */
+    --tw-border-opacity: 1;
 }

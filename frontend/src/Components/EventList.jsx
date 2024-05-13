@@ -4,6 +4,13 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
+const EventHome = styled.div`
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('images/event.jpg');
+background-position: center;
+background-size: cover;
+backdrop-filter: blur(15px);
+height: max-content;
+`
 const Container = styled.div`
 display: grid;
 grid-template-columns: repeat(4, 1fr);
@@ -94,32 +101,34 @@ const EventList = () => {
 
     return (
         <>
-            <Header />
-            <h1 className=' text-center'>  Events List  </h1>
-            <Container className=' container'>
-                {
+            <EventHome>
+                <Header />
+                <h1 className=' text-center px-60 py-60 text-light'>  Events List  </h1>
+                <Container className=' container'>
+                    {
 
-                    data.length === 0 ? <p className=' text-center text-primary-emphasis'>  <NavLink to='/addevent' className=' nav-link nav-item'>   No event added yet click here to add </NavLink>  </p> :
-                        data.map((elem) => {
-                            return (
-                                <Card key={elem.id}>
-                                    <div className="card">
-                                        <img src={"http://127.0.0.1:8000/" + elem.file_path} alt="" className=' card-img m-auto' />
-                                        <div className=' card-text' >
-                                            <h2> {elem.name} </h2>
-                                            <p>{elem.description}</p>
-                                            <button className="btn btn-outline-danger" onClick={() => deleteItems(elem.id)}> Delete </button>
-                                            <button className="btn btn-outline-primary"><NavLink to={"/updateevent/" + elem.id} className=' text-decoration-none'> Edit </NavLink></button>
-                                            <button className="btn btn-outline-primary"><NavLink to='/addevent' className=' text-decoration-none'> Add more </NavLink></button>
+                        data.length === 0 ? <p className=' text-center text-primary-emphasis'>  <NavLink to='/addevent' className=' nav-link nav-item'>   No event added yet click here to add </NavLink>  </p> :
+                            data.map((elem) => {
+                                return (
+                                    <Card key={elem.id}>
+                                        <div className="card">
+                                            <img src={"http://127.0.0.1:8000/" + elem.file_path} alt="" className=' card-img m-auto' />
+                                            <div className=' card-text' >
+                                                <h2> {elem.name} </h2>
+                                                <p>{elem.description}</p>
+                                                <button className="btn btn-outline-danger" onClick={() => deleteItems(elem.id)}> Delete </button>
+                                                <button className="btn btn-outline-primary"><NavLink to={"/updateevent/" + elem.id} className=' text-decoration-none'> Edit </NavLink></button>
+                                                <button className="btn btn-outline-primary"><NavLink to='/addevent' className=' text-decoration-none'> Add more </NavLink></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </Card>
-                            )
-                        })
-                }
+                                    </Card>
+                                )
+                            })
+                    }
 
 
-            </Container>
+                </Container>
+            </EventHome>
         </>
     )
 }

@@ -4,6 +4,13 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
+const Venue = styled.div`
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('images/addevent.jpg');
+background-position: center;
+background-size: cover;
+backdrop-filter: blur(15px);
+height: max-content;
+`
 const Container = styled.div`
 display: grid;
 grid-template-columns: repeat(4, 1fr);
@@ -94,8 +101,9 @@ const VenueList = () => {
 
     return (
         <>
+        <Venue>
             <Header />
-            <h1 className=' text-center'>  Venues List  </h1>
+            <h1 className=' text-center px-60 py-60 text-light'>  Venues List  </h1>
             <Container className=' container'>
                 {
 
@@ -120,6 +128,7 @@ const VenueList = () => {
 
 
             </Container>
+            </Venue>
         </>
     )
 }

@@ -220,7 +220,7 @@ const UserHeader = () => {
         <>
             <Nav className=' navbar '>
                 <Container className=' container' >
-                    <div className="logo">
+                    <div className="logo d-flex justify-content-between">
                         <img src={logoImg} alt="" />
                     </div>
                     <ul className={`${isopen && 'open'}`}>
