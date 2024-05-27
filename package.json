@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "@emailjs/browser": "^4.1.0",
-    "react-google-maps": "^9.4.5",
-    "react-typed": "^2.0.12"
-  }
-}

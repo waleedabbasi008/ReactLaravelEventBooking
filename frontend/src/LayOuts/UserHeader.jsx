@@ -56,7 +56,7 @@ display: none;
 .logo img{
     margin-left: -2rem;
     height: 60px;
-    width: 60px;
+    width: 80px;
     aspect-ratio: 4/4;
     // mix-blend-mode: color-burn;
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), #FDF7E4;
