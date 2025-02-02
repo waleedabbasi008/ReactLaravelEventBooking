@@ -30,7 +30,7 @@ const Header = () => {
      }
     return (
         <>
-            <Navbar expand="lg" className="text-light navbar">
+            <Navbar expand="lg" className="text-light navbar border-red-100">
                 <Container>
                     <Navbar.Brand href="/dashboard"> {
                         localStorage.getItem('user-info') ? <h2> Dashboard </h2> : null
